@@ -816,10 +816,19 @@
             background-color: #eaf1fe;
         }
 
-        .payment-method-icon {
-            font-size: 24px;
-            display: block;
-        }
+   .payment-method-icon {
+    font-size: 24px;
+    display: block;
+    height: 45px;
+}
+
+.payment-method-icon img {
+    height: 45px;
+    width: auto;
+    max-width: 100px;
+    object-fit: contain;
+    display: inline-block;
+}
 
         .payment-method-title {
             font-size: 13px;
@@ -1316,11 +1325,15 @@
                         <label style="font-weight: 700; font-size: 13px;">Please Choose Payment Method</label>
                         <div class="payment-methods-grid">
                             <div class="payment-method-card active-method" id="payCard_momo" onclick="selectLocalPaymentChannel('mtn_momo')">
-                                <span class="payment-method-icon">💛</span>
+                                <span class="payment-method-icon">
+    							<img src="mtn-momo.png" alt="MTN MoMo">
+									</span>
                                 <span class="payment-method-title">Chat on WhatsApp to make Payment</span>
                             </div>
                             <div class="payment-method-card" id="payCard_orange" onclick="selectLocalPaymentChannel('orange_money')">
-                                <span class="payment-method-icon">🍊</span>
+                               <span class="payment-method-icon">
+  								  <img src="orange-money.png" alt="Orange Money">
+								</span>
                                 <span class="payment-method-title">Chat on WhatsApp to make Payment</span>
                             </div>
                             <div class="payment-method-card" id="payCard_cod" onclick="selectLocalPaymentChannel('cash_on_delivery')">
