@@ -1917,22 +1917,22 @@
             console.log(`System database synchronized: ${orders.length} orders safely stored locally.`);
         }
 
-        function getTierPriceCFA(quantity) {
-            if (quantity === 1) return 27000;
-            if (quantity === 2) return 50000;
-            if (quantity === 3) return 70000;
-            if (quantity === 4) return 92000;
-            
-            let setsOfFour = Math.floor(quantity / 4);
-            let remainder = quantity % 4;
-            let total = setsOfFour * 92000;
-            
-            if (remainder === 1) total += 27000;
-            if (remainder === 2) total += 50000;
-            if (remainder === 3) total += 70000;
-            
-            return total;
-        }
+    function getTierPriceCFA(quantity) {
+    if (quantity === 1) return 22000;
+    if (quantity === 2) return 42000;
+    if (quantity === 3) return 58000;
+    if (quantity === 4) return 72000;
+    
+    let setsOfFour = Math.floor(quantity / 4);
+    let remainder = quantity % 4;
+    let total = setsOfFour * 72000;
+    
+    if (remainder === 1) total += 22000;
+    if (remainder === 2) total += 42000;
+    if (remainder === 3) total += 58000;
+    
+    return total;
+}
 
         function formatCurrencyDisplay(cfaAmount) {
             if (currentCurrency === 'CFA') {
@@ -2407,7 +2407,7 @@
                                     `📁 _Note: An image invoice version of this document has been generated and downloaded to your device storage blocks automatically!_`;
             
             const encodedText = encodeURIComponent(whatsappMessage);
-            window.open(`https://wa.me/237682996056?text=${encodedText}`, "_blank");
+            window.open(`https://wa.me/237650789099?text=${encodedText}`, "_blank");
         }
 
         function closeReceiptModal() {
