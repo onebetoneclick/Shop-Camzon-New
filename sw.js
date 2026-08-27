@@ -1,4 +1,4 @@
-const CACHE_NAME = "shopcamzon-v1";
+const CACHE_NAME = "shopcamzon-v2";
 
 const urlsToCache = [
     "./",
