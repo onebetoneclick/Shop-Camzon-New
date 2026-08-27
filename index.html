@@ -2181,21 +2181,24 @@
             setTimeout(() => {
                 loader.style.display = 'none';
 
-               if (chosenPaymentMethodChannel === 'cash_on_delivery') {
+      if (chosenPaymentMethodChannel === 'cash_on_delivery') {
 
-    executeFinalOrderConfirmationPipeline(
-        email,
-        name,
-        phone,
-        whatsapp,
-        townCity,
-        state,
-        address,
-        notes,
-        totalCfaAmount,
-        "Pending Cash On Delivery",
-        "SUCCESSFUL"
-    );
+    latestTransactionData = {
+        date: new Date().toLocaleString(),
+        reference: "CAMZON-" + Date.now(),
+        name: name,
+        email: email,
+        phone: phone,
+        whatsapp: whatsapp,
+        cityState: townCity + ", " + state,
+        address: address,
+        notes: notes || "None",
+        paymentMethodString: "Cash On Delivery",
+        summary: cart.map(item => `${item.name} (${item.quantity} Pcs)`).join(", "),
+        displayTotal: formatCurrencyDisplay(totalCfaAmount)
+    };
+
+    executeWhatsAppTextDispatch();
 
 } else {
 
